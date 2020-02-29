@@ -1,19 +1,5 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
-// import { gql } from "apollo-boost";
-// import {client} from './graphql-client'
-
-//     client
-//     .query({
-//       query: gql`
-//         {
-//           rates(currency: "USD") {
-//             currency
-//           }
-//         }
-//       `
-//     })
-//     .then(result => console.log(result));
 
 import Index from './pages/index'
 

@@ -86,7 +86,7 @@ const config = {
         }
       }
     }
-  }
+  },
 }
 
 module.exports = function (merge) {

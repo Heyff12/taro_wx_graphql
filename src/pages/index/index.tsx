@@ -2,10 +2,13 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
+import {client} from '../../graphql-client'
+
 
 import { add, minus, asyncAdd } from '../../actions/counter'
 
 import './index.less'
+import { testQuery } from '../../query/test'
 
 // #region 书写注意
 //
@@ -71,7 +74,11 @@ class Index extends Component {
 
   componentWillUnmount () { }
 
-  componentDidShow () { }
+  componentDidShow () {
+    const query = testQuery
+    client.query({query})
+    .then(result => console.log(result));
+  }
 
   componentDidHide () { }
 
