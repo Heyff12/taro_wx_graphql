@@ -5,6 +5,7 @@ import Taro from '@tarojs/taro'
 
 export const client = new ApolloClient({
   uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  // uri: 'http://localhost:7777/graphql',
   request: operation => {
     const token = Taro.getStorageSync('token')
     operation.setContext({
